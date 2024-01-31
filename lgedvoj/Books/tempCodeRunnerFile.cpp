@@ -10,7 +10,7 @@ vector<int> dataIn;
 // int N = 4;
 // int t = 5;
 // vector<int> dataIn = {0, 3, 1, 2, 2};
-uint8_t resValue[100000][1000];
+int resValue[100000][100000];
 int line = 0;
 
 int result[100];
@@ -39,7 +39,7 @@ void gen(int i, int n) {
         else assignValue(n);
     }
 }
-long int sum[10000] = {};
+int sum[10000] = {};
 int solve() {
     int maxBook = 0;
     for (int i = 1; i <= line; i++) {
@@ -62,6 +62,8 @@ int solve() {
 
 int main() {
     input();
+    int max = 0;
+    int length = 0;
     gen(1, N);
     // for (int i = 1; i <= line; i++) {
     //     for (int j = 1; j <= N; j++) {
